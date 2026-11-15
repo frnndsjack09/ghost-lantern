@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#030709">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>The Ghost Lantern</title>
+<meta name="apple-mobile-web-app-title" content="Lantern">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icon-wGZqjA56.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+  <script type="module" crossorigin src="./assets/index-D2Yb32_O.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CgH3LlJX.css">
+</head>
+<body>
+
+<!-- Lock -->
+<section id="lock" class="view lock" aria-labelledby="h-lock" hidden>
+  <svg class="wisp wisp-lg" viewBox="80 80 240 260" aria-hidden="true">
+    <defs>
+      <linearGradient id="wf1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#062A33" stop-opacity=".85"/><stop offset=".6" stop-color="#0E5866" stop-opacity=".6"/><stop offset="1" stop-color="#2CC6D6" stop-opacity=".55"/></linearGradient>
+      <filter id="wg1" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g class="w-float">
+      <path class="w-body" d="M200 92 C 236 140 282 170 282 232 C 282 282 246 312 200 312 C 154 312 118 282 118 232 C 118 192 146 172 162 140 C 168 162 178 172 188 176 C 186 146 190 118 200 92 Z" fill="url(#wf1)" stroke="#2CC6D6" stroke-opacity=".5" stroke-width="1.5"/>
+      <g class="w-eyes"><g class="w-look" filter="url(#wg1)">
+        <ellipse class="w-eye" cx="180" cy="230" rx="8" ry="11" fill="#C8FFF6"/><ellipse class="w-eye" cx="220" cy="230" rx="8" ry="11" fill="#C8FFF6"/>
+      </g></g>
+    </g>
+  </svg>
+  <h1 id="h-lock" class="brand">THE GHOST LANTERN</h1>
+  <form id="lock-form" class="pill-form">
+    <label for="pass" class="sr">Passphrase</label>
+    <input id="pass" type="password" autocomplete="current-password" required maxlength="200" placeholder="Passphrase">
+    <button class="go" type="submit" aria-label="Enter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </button>
+  </form>
+  <p id="lock-error" class="note error" role="alert"></p>
+</section>
+
+<!-- Chat -->
+<section id="chat" class="view chat" aria-label="Conversation with the Mentalist" hidden>
+  <header class="top">
+    <div class="home">
+      <div class="flame lantern" id="h-flame" role="img" aria-label="Hollow, the ghost in the lantern. Stroke, tap, hold, double-tap for its rules, or swipe it down.">
+        <div class="swing">
+        <svg class="lantern-back" viewBox="70 -20 160 380" aria-hidden="true">
+          <defs><radialGradient id="lh-halo" cx="50%" cy="50%" r="50%"><stop class="lh-stop" offset="0" stop-opacity=".55"/><stop class="lh-stop" offset=".45" stop-opacity=".15"/><stop class="lh-stop" offset="1" stop-opacity="0"/></radialGradient></defs>
+          <path d="M150 -20 V 44" stroke="#3A5560" stroke-width="3" stroke-dasharray="7 4" fill="none"/>
+          <circle cx="150" cy="52" r="9" fill="none" stroke="#3A5560" stroke-width="2"/>
+          <circle class="lh-halo" cx="150" cy="215" r="240" fill="url(#lh-halo)"/>
+          <path class="lh-metal" d="M104 92 L 120 64 H 180 L 196 92 Z"/>
+          <rect class="lh-metal" x="92" y="90" width="116" height="14" rx="3"/>
+          <rect class="lh-glass" x="98" y="104" width="104" height="214" rx="4"/>
+        </svg>
+        <div class="rig" id="h-rig"><div class="float">
+          <svg viewBox="100 80 200 250" aria-hidden="true">
+            <defs>
+              <linearGradient id="h-grad" x1="0" y1="1" x2="0" y2="0"><stop class="h-s1" offset="0" stop-opacity=".9"/><stop class="h-s2" offset=".6" stop-opacity=".7"/><stop class="h-s3" offset="1" stop-opacity=".6"/></linearGradient>
+              <filter id="h-glowf" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur id="h-glow" stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="h-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
+              <clipPath id="h-cL"><path id="h-cLp"/></clipPath>
+              <clipPath id="h-cR"><path id="h-cRp"/></clipPath>
+            </defs>
+            <path id="h-tongue" class="h-tongue" d="M254 176 C 268 190 272 206 262 222 C 258 210 252 202 244 198 C 250 192 252 184 254 176 Z" fill="url(#h-grad)" stroke-opacity=".5" stroke-width="3" opacity="0"/>
+            <path id="h-body" class="h-body" d="M200 92 C 236 140 282 170 282 232 C 282 282 246 312 200 312 C 154 312 118 282 118 232 C 118 192 146 172 162 140 C 168 162 178 172 188 176 C 186 146 190 118 200 92 Z" fill="url(#h-grad)" stroke-opacity=".6" stroke-width="4"/>
+            <g id="h-look">
+              <ellipse id="h-bL" class="h-blush" cx="163" cy="252" rx="9" ry="5" filter="url(#h-soft)" opacity="0"/>
+              <ellipse id="h-bR" class="h-blush" cx="237" cy="252" rx="9" ry="5" filter="url(#h-soft)" opacity="0"/>
+              <g filter="url(#h-glowf)"><path id="h-eL" class="h-eye"/><path id="h-eR" class="h-eye"/></g>
+              <g clip-path="url(#h-cL)"><circle id="h-sL1" class="h-shine" r="2.6"/><circle id="h-sL2" class="h-shine" r="1.2" opacity=".8"/><path id="h-stL" class="h-shine"/></g>
+              <g clip-path="url(#h-cR)"><circle id="h-sR1" class="h-shine" r="2.6"/><circle id="h-sR2" class="h-shine" r="1.2" opacity=".8"/><path id="h-stR" class="h-shine"/></g>
+            </g>
+            <g id="h-zzz"></g>
+          </svg>
+        </div></div>
+        <svg class="lantern-front" viewBox="70 -20 160 380" aria-hidden="true">
+          <path d="M124 104 V 318 M176 104 V 318" stroke="#3A5560" stroke-width="2" opacity=".55" fill="none"/>
+          <rect class="lh-metal" x="86" y="316" width="128" height="16" rx="3"/>
+          <path class="lh-metal" d="M100 332 H 200 L 190 350 H 110 Z"/>
+        </svg>
+        </div>
+      </div>
+      <div class="people" id="h-people" hidden></div>
+    </div>
+    <p class="mood" aria-hidden="true"></p>
+    <button id="menu" class="menu-btn" type="button" aria-haspopup="dialog" aria-label="Menu: conversations, memory, settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+    <p id="h-hint" class="note h-hint" aria-live="polite"></p>
+  </header>
+
+  <main id="log" class="log" aria-live="polite" tabindex="-1">
+    <p id="hint" class="note" hidden>Scroll up for earlier messages</p>
+  </main>
+
+  <div class="bottom">
+    <p id="pending" class="note pending" hidden><span id="pending-text"></span> <button id="pending-x" type="button" class="link">remove</button></p>
+    <form id="ask" class="pill-form has-clip">
+      <button id="clip" class="clip" type="button" aria-label="Upload a photo or file">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 11-8.6 8.6a5 5 0 0 1-7-7l8.5-8.6a3.3 3.3 0 0 1 4.7 4.7l-8.6 8.6a1.7 1.7 0 0 1-2.4-2.4l7.9-7.9"/></svg>
+      </button>
+      <button id="cam-btn" class="clip" type="button" aria-label="Take a photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+      </button>
+      <label for="q" class="sr">Message the Mentalist</label>
+      <textarea id="q" rows="1" maxlength="4000" placeholder="Write to me…" autocomplete="off"></textarea>
+      <button id="send" class="go" type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="i-send"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="i-stop"><rect x="7" y="7" width="10" height="10" rx="1"/></svg>
+      </button>
+    </form>
+  </div>
+  <input id="file" type="file" class="sr" tabindex="-1" aria-hidden="true">
+  <input id="cam" type="file" accept="image/*" capture="environment" class="sr" tabindex="-1" aria-hidden="true">
+  <div id="drop" class="drop" hidden><p>Drop a photo, a file or a chat export</p></div>
+</section>
+
+<!-- First open: the Ghost Lantern's story, once (tap through, arrows, or Skip) -->
+<section id="intro" class="intro" aria-label="The Ghost Lantern, a short story. Tap to continue." hidden>
+  <canvas id="intro-sky" class="intro-sky" aria-hidden="true"></canvas>
+  <p class="intro-eyebrow" aria-hidden="true">THE GHOST LANTERN</p>
+  <button id="intro-skip" class="intro-skip" type="button">SKIP</button>
+  <div class="intro-hang">
+    <svg class="intro-lantern" id="intro-lantern" viewBox="70 -20 160 380" data-flame="out" data-eyes="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="il-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2CC6D6" stop-opacity=".55"/><stop offset=".45" stop-color="#2CC6D6" stop-opacity=".16"/><stop offset="1" stop-color="#2CC6D6" stop-opacity="0"/></radialGradient>
+        <linearGradient id="il-fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#062A33" stop-opacity=".95"/><stop offset=".6" stop-color="#0E5866" stop-opacity=".8"/><stop offset="1" stop-color="#2CC6D6" stop-opacity=".75"/></linearGradient>
+        <filter id="il-soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <path class="il-chain" d="M150 -20 V 44"/>
+      <circle cx="150" cy="52" r="9" fill="none" stroke="#3A5560" stroke-width="2"/>
+      <circle class="il-halo" cx="150" cy="215" r="190" fill="url(#il-halo)"/>
+      <path class="il-metal" d="M104 92 L 120 64 H 180 L 196 92 Z"/>
+      <rect class="il-metal" x="92" y="90" width="116" height="14" rx="3"/>
+      <rect class="il-glass" x="98" y="104" width="104" height="214" rx="4"/>
+      <g class="il-flame"><g class="il-flame-body">
+        <path transform="translate(150 211) scale(.42) translate(-200 -202)" d="M200 92 C 236 140 282 170 282 232 C 282 282 246 312 200 312 C 154 312 118 282 118 232 C 118 192 146 172 162 140 C 168 162 178 172 188 176 C 186 146 190 118 200 92 Z" fill="url(#il-fl)" stroke="#2CC6D6" stroke-opacity=".7" stroke-width="5"/>
+        <g class="il-eyes" filter="url(#il-soft)"><ellipse cx="141.6" cy="222.8" rx="3.4" ry="4.6" fill="#C8FFF6"/><ellipse cx="158.4" cy="222.8" rx="3.4" ry="4.6" fill="#C8FFF6"/></g>
+      </g></g>
+      <path d="M124 104 V 318 M176 104 V 318" stroke="#3A5560" stroke-width="2" opacity=".55"/>
+      <rect class="il-metal" x="86" y="316" width="128" height="16" rx="3"/>
+      <path class="il-metal" d="M100 332 H 200 L 190 350 H 110 Z"/>
+    </svg>
+  </div>
+  <button id="intro-next" class="intro-stage" type="button" aria-label="Next"><span id="intro-line" class="intro-line" aria-live="polite"></span></button>
+  <div class="intro-dots" id="intro-dots" aria-hidden="true"></div>
+  <p class="intro-hint" id="intro-hint" aria-hidden="true">TAP TO CONTINUE</p>
+</section>
+
+<!-- Reply actions (long-press or right-click a reply) -->
+<div id="actions" class="actions" role="menu" hidden>
+  <button type="button" role="menuitem" data-act="up">Spot on</button>
+  <button type="button" role="menuitem" data-act="down">Wrong</button>
+  <button type="button" role="menuitem" data-act="explain">How did you know?</button>
+  <button type="button" role="menuitem" data-act="copy">Copy</button>
+</div>
+
+<!-- Menu -->
+<dialog id="drawer" class="sheet" aria-labelledby="h-drawer">
+  <div class="sheet-in">
+    <div class="sheet-head">
+      <h2 id="h-drawer">THE GHOST LANTERN</h2>
+      <button id="drawer-x" class="link" type="button">Close</button>
+    </div>
+    <button id="new" class="row" type="button">New conversation</button>
+    <button id="attach" class="row" type="button">Upload a photo, file or chat export</button>
+    <h3>Conversations</h3>
+    <ul id="sessions" class="list"></ul>
+    <h3>What the Mentalist remembers</h3>
+    <ul id="memory" class="list mem"></ul>
+    <button id="reflect" class="row" type="button">Reflect on my week</button>
+    <h3>People I've read</h3>
+    <ul id="people-list" class="list mem"></ul>
+    <button id="forget" class="row quiet" type="button">Forget everything</button>
+    <h3>Settings</h3>
+    <label class="row toggle"><span>Typing sound</span><input id="set-tick" type="checkbox"></label>
+    <label class="row toggle"><span>Vibrate on reply</span><input id="set-buzz" type="checkbox" checked></label>
+    <label class="row toggle"><span>Hollow's soft hum</span><input id="set-hum" type="checkbox"></label>
+    <button id="install" class="row" type="button" hidden>Install as an app</button>
+    <button id="pair" class="row" type="button">Connect browser extension</button>
+    <div id="pair-box" class="pair-box" hidden>
+      <p class="note">Paste this code into the Mentalist extension. It works like a signed-in device: keep it private.</p>
+      <input id="pair-code" type="text" readonly aria-label="Pairing code for the browser extension">
+      <button id="pair-copy" class="row" type="button">Copy code</button>
+    </div>
+    <button id="out" class="row quiet" type="button">Sign out</button>
+  </div>
+</dialog>
+
+<!-- Chat export: who's who -->
+<dialog id="who" class="sheet" aria-labelledby="h-who">
+  <form method="dialog" class="sheet-in">
+    <h2 id="h-who">Who's who?</h2>
+    <p id="who-count" class="note"></p>
+    <label class="field"><span>This is me</span><select id="who-me"></select></label>
+    <label class="field"><span>Read this person</span><select id="who-person"></select></label>
+    <p id="who-error" class="note error" role="alert"></p>
+    <button class="row strong" value="ok">Attach</button>
+    <button class="row quiet" value="cancel" formnovalidate>Cancel</button>
+  </form>
+</dialog>
+
+</body>
+</html>
