@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get the Ghost Lantern</title><meta name="robots" content="noindex"><link rel="apple-touch-icon" href="../icon-192.png">
+<style>
+:root { --night: #02070a; --ink: #e8fbf8; --soft: #a9c4c8; --mist: #6f8f96; --eye: #c8fff6; --deep: #062a33; color-scheme: dark; }
+body { margin: 0; min-height: 100dvh; background: radial-gradient(120% 60% at 50% 0%, #0b3a40, transparent 60%), var(--night); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; display: grid; place-items: center; }
+main { width: min(420px, 100%); box-sizing: border-box; padding: 32px max(20px, env(safe-area-inset-left)); text-align: center; }
+img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 0 40px rgba(44,198,214,.35); }
+h1 { margin: 18px 0 4px; font: 600 30px/1.15 Georgia, "Times New Roman", serif; }
+p { margin: 0 0 18px; color: var(--soft); }
+a.go { display: block; margin: 0 0 22px; padding: 15px; border-radius: 28px; background: var(--eye); color: var(--deep); font-weight: 600; text-decoration: none; }
+ol { margin: 0; padding-left: 22px; text-align: left; color: var(--soft); display: grid; gap: 8px; }
+small { display: block; margin-top: 22px; color: var(--mist); }
+[hidden] { display: none !important; }
+</style></head><body><main>
+<img src="../icon-512.png" alt="">
+<h1>The Ghost Lantern</h1>
+<section id="android" hidden>
+  <p>Get the Android app.</p>
+  <a class="go" href="https://github.com/frnndsjack09/ghost-lantern/releases/latest/download/Ghost-Lantern.apk">Download the app</a>
+  <ol><li>Open the downloaded file (Chrome shows it at the bottom, or look in Downloads).</li><li>If asked, allow Chrome to install apps, then tap Install.</li><li>If Play Protect warns about an unknown app, tap "Install anyway". It's a private app, not from the Play Store.</li></ol>
+</section>
+<section id="iphone" hidden>
+  <p>On iPhone, add the Lantern to your Home Screen.</p>
+  <a class="go" href="../">Open the Lantern</a>
+  <ol><li>Open it in Safari.</li><li>Tap Share, then Add to Home Screen.</li><li>Open it from the lantern icon on your Home Screen.</li></ol>
+</section>
+<section id="other" hidden>
+  <p>Open this page on your phone to install it, or use it here.</p>
+  <a class="go" href="../">Open the Lantern</a>
+</section>
+<small>Your conversations stay on your own phone.</small>
+</main>
+<script>
+var ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+document.getElementById(/Android/i.test(ua) ? "android" : ios ? "iphone" : "other").hidden = false;
+</script></body></html>
