@@ -7,11 +7,14 @@ concurrency: { group: pages, cancel-in-progress: true }
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: { name: github-pages, url: ${{ steps.deploy.outputs.page_url }} }
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Swap in the keys
-        env: { KEYS: ${{ secrets.TELL_KEYS_B64 }} }
+        env:
+          KEYS: ${{ secrets.TELL_KEYS_B64 }}
         run: |
           test -n "$KEYS" || { echo "TELL_KEYS_B64 secret missing"; exit 1; }
           grep -rl TELLKEYSPLACEHOLDER site | xargs sed -i "s|TELLKEYSPLACEHOLDER|$KEYS|g"
