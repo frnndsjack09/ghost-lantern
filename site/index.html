@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
-  <script type="module" crossorigin src="./assets/index-D2Yb32_O.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CgH3LlJX.css">
+  <script type="module" crossorigin src="./assets/index-ChNizFIk.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CElWOcSm.css">
 </head>
 <body>
 
@@ -185,6 +185,10 @@
     <label class="row toggle"><span>Typing sound</span><input id="set-tick" type="checkbox"></label>
     <label class="row toggle"><span>Vibrate on reply</span><input id="set-buzz" type="checkbox" checked></label>
     <label class="row toggle"><span>Hollow's soft hum</span><input id="set-hum" type="checkbox"></label>
+    <div id="place-box" hidden>
+      <label class="field"><span>Your city, for weather and festivals (optional)</span><input id="set-place" type="text" maxlength="80" autocomplete="address-level2" enterkeyhint="done" placeholder="e.g. Mumbai"></label>
+      <p id="place-note" class="note" aria-live="polite">Only the city is sent to a weather service, never your chats.</p>
+    </div>
     <button id="install" class="row" type="button" hidden>Install as an app</button>
     <button id="pair" class="row" type="button">Connect browser extension</button>
     <div id="pair-box" class="pair-box" hidden>
