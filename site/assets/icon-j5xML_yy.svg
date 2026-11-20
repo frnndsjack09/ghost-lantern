@@ -13,7 +13,7 @@
 <rect x="92" y="90" width="116" height="14" rx="3" fill="#10232a" stroke="#4d7480" stroke-width="4"/>
 <rect x="98" y="104" width="104" height="214" rx="4" fill="#2CC6D6" fill-opacity=".1" stroke="#4d7480" stroke-width="4"/>
 <g transform="translate(150 214) scale(.52) translate(-200 -202)">
-<path d="M200 92 C 236 140 282 170 282 232 C 282 282 246 312 200 312 C 154 312 118 282 118 232 C 118 192 146 172 162 140 C 168 162 178 172 188 176 C 186 146 190 118 200 92 Z" fill="url(#body)" stroke="#2CC6D6" stroke-width="6"/>
+<path d="M200 92 C 242 145 278 183 272 235 C 266 283 236 312 200 312 C 164 312 134 283 128 235 C 122 183 158 145 200 92 Z" fill="url(#body)" stroke="#2CC6D6" stroke-width="6"/>
 <g filter="url(#glow)"><ellipse cx="180" cy="230" rx="9" ry="12.5" fill="#C8FFF6"/><ellipse cx="220" cy="230" rx="9" ry="12.5" fill="#C8FFF6"/></g>
 <circle cx="182.5" cy="225" r="2.6" fill="#ffffff"/><circle cx="222.5" cy="225" r="2.6" fill="#ffffff"/>
 </g>
