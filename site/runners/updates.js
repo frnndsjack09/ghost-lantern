@@ -18,6 +18,7 @@ addEventListener("checkUpdate", async (resolve, reject) => {
         title: "A new lantern is lit",
         body: typeof l.notes === "string" && l.notes ? "What's new: " + l.notes.slice(0, 160) : "Tap to update the Ghost Lantern.",
         autoCancel: true,
+        smallIcon: "ic_stat_lantern", // white lantern in the status bar (scripts/make-icons.ts)
       }]);
       CapacitorKV.set("toldBuild", String(l.build));
     }
