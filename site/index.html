@@ -4,39 +4,28 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; connect-src 'self' https://api.groq.com https://oai.endpoints.kepler.ai.cloud.ovh.net https://openrouter.ai https://generativelanguage.googleapis.com https://api.cohere.ai https://api.z.ai https://api.opentyphoon.ai https://api.sea-lion.ai https://geocoding-api.open-meteo.com https://api.open-meteo.com https://air-quality-api.open-meteo.com https://earthquake.usgs.gov https://caldays.com https://frnndsjack09.github.io; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#030709">
+<meta name="theme-color" content="#f2d699">
 <meta name="referrer" content="no-referrer">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>The Ghost Lantern</title>
-<meta name="apple-mobile-web-app-title" content="Lantern">
+<title>The Discerner</title>
+<meta name="apple-mobile-web-app-title" content="Discerner">
 <meta name="robots" content="noindex">
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" href="./assets/icon-C6-hJvp-.svg" type="image/svg+xml">
+<link rel="icon" href="./assets/icon-BL_-KDGG.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Federo&family=Rajdhani:wght@600;700&family=Inter:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
-  <script type="module" crossorigin src="./assets/index-DnIVBw0b.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BoH-023j.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IM+Fell+English&display=swap">
+  <script type="module" crossorigin src="./assets/index-getJGdEA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-crLC71He.css">
 </head>
 <body>
+<canvas id="sea" aria-hidden="true"></canvas>
 
 <!-- Lock -->
 <section id="lock" class="view lock" aria-labelledby="h-lock" hidden>
-  <svg class="wisp wisp-lg" viewBox="80 80 240 260" aria-hidden="true">
-    <defs>
-      <linearGradient id="wf1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#062A33" stop-opacity=".85"/><stop offset=".6" stop-color="#0E5866" stop-opacity=".6"/><stop offset="1" stop-color="#2CC6D6" stop-opacity=".55"/></linearGradient>
-      <filter id="wg1" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    </defs>
-    <g class="w-float">
-      <path class="w-body" d="M200 92 C 242 145 278 183 272 235 C 266 283 236 312 200 312 C 164 312 134 283 128 235 C 122 183 158 145 200 92 Z" fill="url(#wf1)" stroke="#2CC6D6" stroke-opacity=".5" stroke-width="1.5"/>
-      <g class="w-eyes"><g class="w-look" filter="url(#wg1)">
-        <ellipse class="w-eye" cx="180" cy="230" rx="8" ry="11" fill="#C8FFF6"/><ellipse class="w-eye" cx="220" cy="230" rx="8" ry="11" fill="#C8FFF6"/>
-      </g></g>
-    </g>
-  </svg>
-  <h1 id="h-lock" class="brand">THE GHOST LANTERN</h1>
+  <h1 id="h-lock" class="brand">The Discerner</h1>
   <form id="lock-form" class="pill-form">
     <label for="pass" class="sr">Passphrase</label>
     <input id="pass" type="password" autocomplete="current-password" required maxlength="200" placeholder="Passphrase">
@@ -48,7 +37,7 @@
 </section>
 
 <!-- Chat -->
-<section id="chat" class="view chat" aria-label="Conversation with the Mentalist" hidden>
+<section id="chat" class="view chat" aria-label="Conversation with the Discerner" hidden>
   <header class="top">
     <div class="home">
       <div class="flame lantern" id="h-flame" role="button" tabindex="0" aria-label="Hollow, the ghost in the lantern. Activate to read its rules.">
@@ -93,9 +82,7 @@
       <div class="people" id="h-people" hidden></div>
     </div>
     <p class="mood" aria-hidden="true"></p>
-    <button id="menu" class="menu-btn" type="button" aria-haspopup="dialog" aria-label="Menu: conversations, memory, settings">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-    </button>
+    <button id="menu" class="menu-btn" type="button" aria-haspopup="dialog" aria-label="Menu: conversations, memory, settings">The Discerner</button>
     <p id="h-hint" class="note h-hint" aria-live="polite"></p>
   </header>
 
@@ -113,7 +100,7 @@
       <button id="cam-btn" class="clip" type="button" aria-label="Take a photo">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
       </button>
-      <label for="q" class="sr">Message the Mentalist</label>
+      <label for="q" class="sr">Message the Discerner</label>
       <textarea id="q" rows="1" maxlength="4000" placeholder="Write to me…" autocomplete="off"></textarea>
       <button id="send" class="go" type="submit" aria-label="Send">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="i-send"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
@@ -126,36 +113,13 @@
   <div id="drop" class="drop" hidden><p>Drop a photo, a file or a chat export</p></div>
 </section>
 
-<!-- First open: the Ghost Lantern's story, once (tap through, arrows, or Skip) -->
-<section id="intro" class="intro" aria-label="The Ghost Lantern, a short story. Tap to continue." hidden>
-  <canvas id="intro-sky" class="intro-sky" aria-hidden="true"></canvas>
-  <p class="intro-eyebrow" aria-hidden="true">THE GHOST LANTERN</p>
-  <button id="intro-skip" class="intro-skip" type="button">SKIP</button>
-  <div class="intro-hang">
-    <svg class="intro-lantern" id="intro-lantern" viewBox="70 -20 160 380" data-flame="out" data-eyes="none" aria-hidden="true">
-      <defs>
-        <radialGradient id="il-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2CC6D6" stop-opacity=".55"/><stop offset=".45" stop-color="#2CC6D6" stop-opacity=".16"/><stop offset="1" stop-color="#2CC6D6" stop-opacity="0"/></radialGradient>
-        <linearGradient id="il-fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#062A33" stop-opacity=".95"/><stop offset=".6" stop-color="#0E5866" stop-opacity=".8"/><stop offset="1" stop-color="#2CC6D6" stop-opacity=".75"/></linearGradient>
-        <filter id="il-soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="il-chain" d="M150 -20 V 43"/>
-      <circle class="lh-ring" cx="150" cy="52" r="9"/>
-      <circle class="il-halo" cx="150" cy="215" r="190" fill="url(#il-halo)"/>
-      <path class="il-metal" d="M98 106 C 102 76 126 62 150 61 C 174 62 198 76 202 106 Z"/>
-      <path class="lh-curl" d="M98 104 C 78 96 70 74 84 68 C 94 64 100 76 90 80 M202 104 C 222 96 230 74 216 68 C 206 64 200 76 210 80"/>
-      <path class="il-glass" d="M100 108 C 88 170 88 250 104 318 L 196 318 C 212 250 212 170 200 108 Z"/>
-      <g class="il-flame"><g class="il-flame-body">
-        <path transform="translate(150 211) scale(.42) translate(-200 -202)" d="M200 92 C 242 145 278 183 272 235 C 266 283 236 312 200 312 C 164 312 134 283 128 235 C 122 183 158 145 200 92 Z" fill="url(#il-fl)" stroke="#2CC6D6" stroke-opacity=".7" stroke-width="5"/>
-        <g class="il-eyes" filter="url(#il-soft)"><ellipse cx="141.6" cy="222.8" rx="3.4" ry="4.6" fill="#C8FFF6"/><ellipse cx="158.4" cy="222.8" rx="3.4" ry="4.6" fill="#C8FFF6"/></g>
-      </g></g>
-      <path class="lh-rib" d="M126 110 C 114 180 114 250 128 316 M174 110 C 186 180 186 250 172 316"/>
-      <path class="il-metal" d="M92 316 H 208 L 218 338 C 176 352 124 352 82 338 Z"/>
-      <path class="lh-curl" d="M92 340 C 78 358 62 352 68 342 M208 340 C 222 358 238 352 232 342"/>
-    </svg>
-  </div>
-  <button id="intro-next" class="intro-stage" type="button" aria-label="Next"><span id="intro-line" class="intro-line" aria-live="polite"></span></button>
-  <div class="intro-dots" id="intro-dots" aria-hidden="true"></div>
-  <p class="intro-hint" id="intro-hint" aria-hidden="true">TAP TO CONTINUE</p>
+<!-- First open: the staff parts the sea, once -->
+<section id="intro" class="intro" aria-label="Welcome" hidden>
+  <div class="intro-staff"><svg class="staff" viewBox="0 0 62 200" aria-hidden="true"><path d="M31 196C28 168 35 142 32 116C30 96 35 80 31 60C28 38 30 18 42 12C53 7 59 18 52 27C48 33 41 30 42 24" stroke="#efcf90" stroke-width="13"/><path d="M31 196C28 168 35 142 32 116C30 96 35 80 31 60C28 38 30 18 42 12C53 7 59 18 52 27C48 33 41 30 42 24" stroke="#5e3518" stroke-width="8"/><path d="M29 180C27 160 33 140 30 116M29 92C31 80 30 70 29 58C27 40 29 24 39 16" stroke="#a8703d" stroke-width="2.2"/><path d="M26 138l10 3M27 86l9-3" stroke="#3a1f0d" stroke-width="3"/></svg></div>
+  <h1>The Discerner</h1>
+  <blockquote>Counsel in the heart of man is like deep water; but a man of understanding will draw it out.</blockquote>
+  <cite>Proverbs 20:5</cite>
+  <button id="part" class="part" type="button">Part the sea</button>
 </section>
 
 <!-- Reply actions (long-press or right-click a reply) -->
@@ -170,14 +134,14 @@
 <dialog id="drawer" class="sheet" aria-labelledby="h-drawer">
   <div class="sheet-in">
     <div class="sheet-head">
-      <h2 id="h-drawer">THE GHOST LANTERN</h2>
+      <h2 id="h-drawer">The Discerner</h2>
       <button id="drawer-x" class="link" type="button">Close</button>
     </div>
     <button id="new" class="row" type="button">New conversation</button>
     <button id="attach" class="row" type="button">Upload a photo, file or chat export</button>
     <h3>Conversations</h3>
     <ul id="sessions" class="list"></ul>
-    <h3>What the Mentalist remembers</h3>
+    <h3>What I remember</h3>
     <ul id="memory" class="list mem"></ul>
     <button id="reflect" class="row" type="button">Reflect on my week</button>
     <h3>People I've read</h3>
@@ -186,7 +150,7 @@
     <h3>Settings</h3>
     <label class="row toggle"><span>Typing sound</span><input id="set-tick" type="checkbox"></label>
     <label class="row toggle"><span>Vibrate on reply</span><input id="set-buzz" type="checkbox" checked></label>
-    <label class="row toggle"><span>Hollow's soft hum</span><input id="set-hum" type="checkbox"></label>
+    <label class="row toggle"><span>Soft hum</span><input id="set-hum" type="checkbox"></label>
     <div id="place-box" hidden>
       <label class="field"><span>Your city, for weather and festivals (optional)</span><input id="set-place" type="text" maxlength="80" autocomplete="address-level2" enterkeyhint="done" placeholder="e.g. Mumbai"></label>
       <div id="place-choices" class="choices" role="group" aria-label="Which one?" hidden></div>
@@ -195,7 +159,7 @@
     <button id="install" class="row" type="button" hidden>Install as an app</button>
     <button id="pair" class="row" type="button">Connect browser extension</button>
     <div id="pair-box" class="pair-box" hidden>
-      <p class="note">Paste this code into the Mentalist extension. It works like a signed-in device: keep it private.</p>
+      <p class="note">Paste this code into the browser extension. It works like a signed-in device: keep it private.</p>
       <input id="pair-code" type="text" readonly aria-label="Pairing code for the browser extension">
       <button id="pair-copy" class="row" type="button">Copy code</button>
     </div>

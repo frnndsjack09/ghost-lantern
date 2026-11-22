@@ -15,8 +15,8 @@ addEventListener("checkUpdate", async (resolve, reject) => {
     if (typeof l.build === "number" && own > 0 && l.build > own && l.build > told) {
       CapacitorNotifications.schedule([{
         id: 4747,
-        title: "A new lantern is lit",
-        body: typeof l.notes === "string" && l.notes ? "What's new: " + l.notes.slice(0, 160) : "Tap to update the Ghost Lantern.",
+        title: "A new version is ready",
+        body: typeof l.notes === "string" && l.notes ? "What's new: " + l.notes.slice(0, 160) : "Tap to update the Discerner.",
         autoCancel: true,
         smallIcon: "ic_stat_lantern", // white lantern in the status bar (scripts/make-icons.ts)
       }]);
